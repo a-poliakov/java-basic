@@ -1,10 +1,10 @@
-version: '3.8'
+version: "3.9"
 services:
-  db:
-    image: postgres:14.1-alpine
-    restart: always
+  postgres:
+    image: postgres:13.3
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=changeme
+      POSTGRES_DB: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
     ports:
-      - '5433:5432'
+      - "5432:5432"
